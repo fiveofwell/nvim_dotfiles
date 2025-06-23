@@ -17,11 +17,11 @@ return {
 		t({
 			'while getopts "sp:" OPT',
 			'do',
-			'	case $OPT in',
+			'	case "${OPT}" in',
 			'	s)',
 			'		;;',
 			'	p)',
-			'		${OPTARG};;',
+			'		"${OPTARG}" ;;',
 			'	*)',
 			'		exit 1 ;;',
 			'	esac',
